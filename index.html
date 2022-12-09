@@ -50,7 +50,7 @@
           <button class="cart-btn | p-relative" aria-controls="cart" aria-expanded="false" title="shopping cart toggle">
             <img class="icon" src="images/icon-cart.svg" alt="" aria-hidden="true">
             <span class="visually-hidden">Cart</span>
-            <span class="items-label"></span>
+            <span class="items-notification"></span>
           </button>
 
           <div id="cart" class="cart">
@@ -216,15 +216,15 @@
           <div class="d-flex column-sm al-items-center" style="gap:1rem;">
             <div class="fig-controls-container | d-flex al-items-center">
 
-              <button class="fig-control" aria-controls="figure" onclick="itemCount(-1)">
-                <img src="images/icon-minus.svg" alt="" aria-hidden="true">
+              <button class="fig-control" aria-controls="itemOrderAmount" onclick="item_Increase_or_decrease(-1)">
+                <img src="images/icon-minus.svg" alt="minus icon" aria-hidden="true">
                 <span class="visually-hidden">Minus</span>
               </button>
 
-              <span id="itemAmountNum">0</span>
+              <span id="itemOrderAmount">0</span>
 
-              <button class="fig-control" aria-controls="itemAmountNum" onclick="itemCount(1)">
-                <img src="images/icon-plus.svg" alt="" aria-hidden="true">
+              <button class="fig-control" aria-controls="itemOrderAmount" onclick="item_Increase_or_decrease(1)">
+                <img src="images/icon-plus.svg" alt="plus icon" aria-hidden="true">
                 <span class="visually-hidden">Plus</span>
               </button>
 

@@ -97,75 +97,74 @@ for (var i = 0; i < product_image.length; i++) {
 
 
 /* cart function starts here */
-var itemNumber = 0;
-
-const itemAmountNum = document.querySelector("#itemAmountNum");
-
 const itemsPrice = 125.0; /* items price */
+var itemOrderCount = 0; /* number of items user wansts to add to cart */
+var numberOfItemsOrdered = 0;
 
-const cartCon = document.querySelector(".cart-con");
+const itemOrderAmount = document.querySelector("#itemOrderAmount");
+
+const cartContent = document.querySelector(".cart-con");
 const emptyCart = document.querySelector(".empty-cart");
 
-const itemsLabel = document.querySelector(".items-label");
+const itemsOrderedNotification = document.querySelector(".items-notification");
 
-/* the multiplier used to calculate the price  */
-const cartItemsNumber = document.querySelector("#cartItemsNumber");
 
 /* result of items calculation */
 const itemsPriceResult = document.querySelector("#Items-price-result");
-
+/* the multiplier used to calculate the price  */
+const cartItemsNumber = document.querySelector("#cartItemsNumber");
 const deleteBtn = document.querySelector("#delete");
 
 /* increasing the number of items that the user want to buy */
 
-function itemCount(n) {
-  itemNumber += n;
+function item_Increase_or_decrease(n) {
+  itemOrderCount += n;
 
-  if (itemNumber < 0) {
-    itemNumber = 0;
+  if (itemOrderCount < 0) {
+    itemOrderCount = 0;
   }
 
-  itemAmountNum.innerHTML = itemNumber;
+  itemOrderAmount.innerHTML = itemOrderCount;
 }
 
 /* the add to cart button function */
 function deleteCartItem(n) {
   if (n <= 0) {
-    cartCon.classList.add("d-none");
-    cartCon.classList.remove("d-block");
+    cartContent.classList.add("d-none");
+    cartContent.classList.remove("d-block");
 
     emptyCart.classList.add("d-block");
     emptyCart.classList.remove("d-none");
 
     cartItemsNumber.innerHTML = itemsPriceResult.innerHTML = 0;
 
-    itemsLabel.classList.remove("on");
-    itemsLabel.innerHTML = "";
+    itemsOrderedNotification.classList.remove("on");
+    itemsOrderedNotification.innerHTML = "";
   } else {
-    cartCon.classList.add("d-block");
-    cartCon.classList.remove("d-none");
+    cartContent.classList.add("d-block");
+    cartContent.classList.remove("d-none");
 
     emptyCart.classList.add("d-none");
     emptyCart.classList.remove("d-block");
 
-    itemsLabel.classList.add("on");
+    itemsOrderedNotification.classList.add("on");
   }
 }
 
 function addToCart() {
-  cartItemsNumber.innerHTML = Number(cartItemsNumber.innerHTML) + itemNumber;
+  numberOfItemsOrdered += itemOrderCount;
 
-  itemsPriceResult.innerHTML = `\$${
-    itemsPrice * Number(cartItemsNumber.innerHTML)
-  }.00`;
+  cartItemsNumber.innerHTML = itemsOrderedNotification.innerHTML = numberOfItemsOrdered;
+
+  itemsPriceResult.innerHTML = itemsPrice * numberOfItemsOrdered + ".00";
 
   // resets the add to cart number
-  itemNumber = 0;
+  itemOrderCount = 0;
 
-  itemAmountNum.innerHTML = 0;
+  itemOrderAmount.innerHTML = 0;
 
-  itemsLabel.innerHTML = cartItemsNumber.innerHTML;
-  deleteCartItem(Number(cartItemsNumber.innerHTML));
+  // itemsOrderedNotification.innerHTML = cartItemsNumber.innerHTML;
+  deleteCartItem(numberOfItemsOrdered);
 }
 
 deleteBtn.addEventListener("click", function () {

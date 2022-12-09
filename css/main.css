@@ -393,7 +393,7 @@ header .flex-nav .primary-nav ul a:hover::after, header .flex-nav .primary-nav u
     box-shadow: 5rem 0 0 30rem hsla(0deg, 0%, 0%, 0.75);
   }
 }
-header .flex-nav .cart-btn .items-label {
+header .flex-nav .cart-btn .items-notification {
   display: none;
   position: absolute;
   inset: -40% -50% auto auto;
@@ -404,7 +404,7 @@ header .flex-nav .cart-btn .items-label {
   color: hsl(0deg, 0%, 100%);
   font-weight: bold;
 }
-header .flex-nav .cart-btn .items-label.on {
+header .flex-nav .cart-btn .items-notification.on {
   display: block;
 }
 header .flex-nav .cart {
