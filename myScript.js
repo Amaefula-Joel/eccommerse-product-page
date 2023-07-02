@@ -140,6 +140,8 @@ function deleteCartItem(n) {
 
     itemsOrderedNotification.classList.remove("on");
     itemsOrderedNotification.innerHTML = "";
+
+    numberOfItemsOrdered = 0; // resets the number of ordered items counted
   } else {
     cartContent.classList.add("d-block");
     cartContent.classList.remove("d-none");
@@ -156,7 +158,7 @@ function addToCart() {
 
   cartItemsNumber.innerHTML = itemsOrderedNotification.innerHTML = numberOfItemsOrdered;
 
-  itemsPriceResult.innerHTML = itemsPrice * numberOfItemsOrdered + ".00";
+  itemsPriceResult.innerHTML = `${itemsPrice * numberOfItemsOrdered}.00`;
 
   // resets the add to cart number
   itemOrderCount = 0;
