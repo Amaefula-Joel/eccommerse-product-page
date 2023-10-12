@@ -304,7 +304,7 @@ button .icon:hover, button .icon:focus-visible {
 
 /* general styling */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
   font-weight: 0.9375rem;
   color: hsl(220, 13%, 13%);
   font-size: 0.9375rem;
@@ -318,7 +318,6 @@ h2 {
 
 header .flex-nav {
   background-color: hsl(0, 0%, 100%);
-  padding: 0;
   /* avatar image */
 }
 header .flex-nav > div {
@@ -392,7 +391,6 @@ header .flex-nav .primary-nav ul a:hover::after, header .flex-nav .primary-nav u
   }
 }
 header .flex-nav .cart-btn .items-notification {
-  display: none;
   position: absolute;
   inset: -40% -50% auto auto;
   background-color: hsl(26, 100%, 55%);
@@ -561,8 +559,9 @@ header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
   font-size: 1.75rem;
 }
 .product-content p {
-  color: hsl(219, 9%, 45%);
+  color: hsl(220, 14%, 75%);
   margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 .product-content .price-wrapper {
   gap: 0.5rem;
@@ -602,7 +601,7 @@ header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
   align-items: center;
 }
 .product-content .fig-controls-container button {
-  height: 100%;
+  padding: 6px;
 }
 @media (min-width: 50em) {
   .product-content .fig-controls-container {
