@@ -11,6 +11,10 @@
 
   <link rel="stylesheet" href="css/animate.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | E-commerce product page</title>
 
 </head>
@@ -18,7 +22,7 @@
 <body>
   <header>
     <div class="container container-padding p-relative">
-      <div class="flex-nav | d-flex jc-space-between">
+      <nav class="flex-nav | d-flex jc-space-between">
         <div class="nav-space">
 
           <button class="menu-open-btn | sm-screen-only" aria-controls="primary-nav" aria-expanded="false">
@@ -29,7 +33,7 @@
           <!-- logo -->
           <a href="#" class="logo"><img src="images/logo.svg" alt="sneakers"></a>
 
-          <nav class="primary-nav | d-flex" id="primary-nav">
+          <div class="primary-nav | d-flex" id="primary-nav">
             <button class="menu-close-btn | sm-screen-only" aria-controls="primary-nav" aria-expanded="false">
               <img class="icon" src="images/icon-close.svg" alt="" aria-hidden="true">
               <span class="visually-hidden">close</span>
@@ -42,7 +46,7 @@
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
-          </nav>
+          </div>
 
         </div>
 
@@ -71,7 +75,7 @@
                   </button>
                 </div>
 
-                <buttton class="btn">Check Out</buttton>
+                <button class="btn" id="checkout">Check Out</button>
               </div>
 
               <p class="empty-cart | d-block">Your cart is empty.</p>
@@ -81,7 +85,7 @@
           <img src="images/image-avatar.png" alt="avatar image" class="avatar" title="avatar">
         </div>
 
-      </div>
+      </nav>
 
     </div>
   </header>

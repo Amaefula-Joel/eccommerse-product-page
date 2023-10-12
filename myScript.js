@@ -173,8 +173,8 @@ deleteBtn.addEventListener("click", function () {
   deleteCartItem(0);
 });
 
-/* document.addEventListener('click', function (e) {
-  if (!(e.target.getAttribute('class').indexOf('primary-nav')  < 0) ) {
-    close_btn.click();
-  }
-}); */
+const checkout = document.querySelector("#checkout");
+
+checkout.addEventListener("click", function () {
+  alert("Thank You For Your Purchase");
+});

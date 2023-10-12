@@ -74,12 +74,10 @@ svg {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -196,8 +194,8 @@ button .icon:hover, button .icon:focus-visible {
 .btn {
   display: inline-block;
   border: none;
-  background-color: hsl(26deg, 100%, 55%);
-  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
   font-size: 0.875rem;
   font-weight: 700;
   text-align: center;
@@ -222,7 +220,7 @@ button .icon:hover, button .icon:focus-visible {
   transition: 0.3s;
 }
 .svg-icon.fill:hover path, .svg-icon.fill:focus-visible path {
-  fill: hsl(26deg, 100%, 55%);
+  fill: hsl(26, 100%, 55%);
 }
 
 /* slide controls */
@@ -234,7 +232,7 @@ button .icon:hover, button .icon:focus-visible {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
 }
 .control.mobile-control {
   width: 2rem;
@@ -262,7 +260,7 @@ button .icon:hover, button .icon:focus-visible {
   transform: scale(0.8);
 }
 .control:hover .svg-icon path {
-  stroke: hsl(26deg, 100%, 55%);
+  stroke: hsl(26, 100%, 55%);
 }
 
 /* product slide thumbnail */
@@ -284,7 +282,7 @@ button .icon:hover, button .icon:focus-visible {
   inset: 0;
   z-index: 30;
   border-radius: 0.5rem;
-  border: 3px solid hsl(26deg, 100%, 55%);
+  border: 3px solid hsl(26, 100%, 55%);
 }
 .thumbnail-btn.active .thumbnails, .thumbnail-btn:hover .thumbnails {
   opacity: 0.5;
@@ -308,7 +306,7 @@ button .icon:hover, button .icon:focus-visible {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 0.9375rem;
-  color: hsl(220deg, 13%, 13%);
+  color: hsl(220, 13%, 13%);
   font-size: 0.9375rem;
 }
 
@@ -319,7 +317,7 @@ h2 {
 }
 
 header .flex-nav {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   padding: 0;
   /* avatar image */
 }
@@ -341,7 +339,7 @@ header .flex-nav .primary-nav ul a {
   display: inline-block;
   font-size: 0.875rem;
   text-decoration: none;
-  color: hsl(219deg, 9%, 45%);
+  color: hsl(219, 9%, 45%);
   padding: 2.5rem 0;
   position: relative;
 }
@@ -350,7 +348,7 @@ header .flex-nav .primary-nav ul a::after {
   position: absolute;
   inset: auto 0 0;
   height: 0.25rem;
-  background-color: hsl(26deg, 100%, 55%);
+  background-color: hsl(26, 100%, 55%);
   transform: scaleX(0);
   transition: 0.3s;
 }
@@ -363,7 +361,7 @@ header .flex-nav .primary-nav ul a:hover::after, header .flex-nav .primary-nav u
   }
   header .flex-nav .primary-nav {
     display: block;
-    background-color: hsl(0deg, 0%, 100%);
+    background-color: hsl(0, 0%, 100%);
     position: fixed;
     inset: 0 auto 0 -100%;
     z-index: 1000;
@@ -380,7 +378,7 @@ header .flex-nav .primary-nav ul a:hover::after, header .flex-nav .primary-nav u
   }
   header .flex-nav .primary-nav ul a {
     font-size: 1.1875rem;
-    color: hsl(0deg, 0%, 0%);
+    color: hsl(0, 0%, 0%);
     font-weight: 700;
     padding: 0;
     width: 100%;
@@ -390,18 +388,18 @@ header .flex-nav .primary-nav ul a:hover::after, header .flex-nav .primary-nav u
   }
   header .flex-nav .primary-nav.opened {
     left: 0;
-    box-shadow: 5rem 0 0 30rem hsla(0deg, 0%, 0%, 0.75);
+    box-shadow: 5rem 0 0 30rem hsla(0, 0%, 0%, 0.75);
   }
 }
 header .flex-nav .cart-btn .items-notification {
   display: none;
   position: absolute;
   inset: -40% -50% auto auto;
-  background-color: hsl(26deg, 100%, 55%);
+  background-color: hsl(26, 100%, 55%);
   padding: 0 0.5rem;
   border-radius: 0.5rem;
   font-size: 0.5625rem;
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: bold;
 }
 header .flex-nav .cart-btn .items-notification.on {
@@ -409,7 +407,7 @@ header .flex-nav .cart-btn .items-notification.on {
 }
 header .flex-nav .cart {
   display: none;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   position: absolute;
   inset: calc(100% + 0.5rem) 0.5rem auto auto;
   z-index: 1000;
@@ -424,7 +422,7 @@ header .flex-nav .cart > * {
   padding: 1rem;
 }
 header .flex-nav .cart .title {
-  border-bottom: 0.1rem solid hsl(220deg, 14%, 75%);
+  border-bottom: 0.1rem solid hsl(220, 14%, 75%);
   font-weight: 700;
 }
 header .flex-nav .cart .content {
@@ -440,33 +438,33 @@ header .flex-nav .cart .content .details .thumbnail {
 }
 header .flex-nav .cart .content .details p {
   flex-grow: 1;
-  color: hsl(219deg, 9%, 45%);
+  color: hsl(219, 9%, 45%);
 }
 header .flex-nav .cart .content .details p b {
   font-weight: 700;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
 }
 header .flex-nav .cart .content .details button {
   flex-grow: 0;
 }
 header .flex-nav .cart .content .empty-cart {
-  color: hsl(219deg, 9%, 45%);
+  color: hsl(219, 9%, 45%);
   font-weight: 700;
 }
 @media (min-width: 50em) {
   header .flex-nav .cart {
     inset: calc(100% - 1rem) 0.5rem auto auto;
-    box-shadow: 0 1rem 2rem hsl(220deg, 14%, 75%);
+    box-shadow: 0 1rem 2rem hsl(220, 14%, 75%);
   }
 }
 header .flex-nav .avatar {
   height: 2rem;
-  border: 2px solid hsl(0deg, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 100%);
   border-radius: 50%;
   cursor: pointer;
 }
 header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
-  border-color: hsl(26deg, 100%, 55%);
+  border-color: hsl(26, 100%, 55%);
 }
 @media (min-width: 50em) {
   header .flex-nav .avatar {
@@ -475,7 +473,7 @@ header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
 }
 @media (min-width: 50em) {
   header {
-    box-shadow: 0 0.03rem 0.25rem hsl(219deg, 9%, 45%);
+    box-shadow: 0 0.03rem 0.25rem hsl(219, 9%, 45%);
   }
 }
 
@@ -552,7 +550,7 @@ header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
 }
 .product-content h1 {
   font-weight: 700;
-  color: hsl(26deg, 100%, 55%);
+  color: hsl(26, 100%, 55%);
   margin-bottom: 1rem;
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -563,7 +561,7 @@ header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
   font-size: 1.75rem;
 }
 .product-content p {
-  color: hsl(219deg, 9%, 45%);
+  color: hsl(219, 9%, 45%);
   margin-bottom: 1.5rem;
 }
 .product-content .price-wrapper {
@@ -575,12 +573,12 @@ header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
 }
 .product-content .price-wrapper .c-price {
   font-weight: 700;
-  color: hsl(0deg, 0%, 0%);
+  color: hsl(0, 0%, 0%);
   font-size: 1.5625rem;
 }
 .product-content .price-wrapper .c-price span {
-  color: hsl(26deg, 100%, 55%);
-  background-color: hsl(25deg, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
   font-size: 0.875rem;
   margin-left: 1rem;
   padding: 0.25rem 0.5rem;
@@ -592,7 +590,7 @@ header .flex-nav .avatar:hover, header .flex-nav .avatar:focus-visible {
   }
 }
 .product-content .fig-controls-container {
-  background-color: hsl(223deg, 64%, 98%);
+  background-color: hsl(223, 64%, 98%);
   font-size: 0.9375rem;
   font-weight: 700;
   padding: 0.75rem;
